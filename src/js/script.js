@@ -103,9 +103,11 @@ document.addEventListener("DOMContentLoaded", () => {
       opacity: 0,
       duration: 1,
       ease: "power2.out",
+      onStart: () => {
+        revealContent(); // 👈 start immediately
+      },
       onComplete: () => {
         loader.style.display = "none";
-        revealContent();
       },
     });
   }
@@ -131,8 +133,14 @@ document.addEventListener("DOMContentLoaded", () => {
           from: "random",
         },
         ease: "power4.out",
-        delay: 0.2,
       });
+    });
+
+    // Background image animation (run once)
+    gsap.from(".bg-img", {
+      scale: 1.15,
+      duration: 1.6,
+      ease: "power4.out",
     });
   }
 
