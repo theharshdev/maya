@@ -323,6 +323,9 @@
   .bg-\[red\] {
     background-color: red;
   }
+  .bg-\[white\] {
+    background-color: white;
+  }
   .bg-white {
     background-color: var(--color-white);
   }
