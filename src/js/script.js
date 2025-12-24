@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Background image animation (run once)
     gsap.from(".bg-img", {
-      scale: 1.15,
+      scale: 1.5,
       duration: 1.6,
       ease: "power4.out",
     });
