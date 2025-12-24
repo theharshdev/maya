@@ -11,10 +11,10 @@
     />
     <link href="./src/output.css" rel="stylesheet" />
   </head>
-  <body class="font-first select-none text-[red]">
+  <body class="font-first select-none text-white">
     <!-- loader -->
     <div
-      class="fixed top-0 left-0 w-full h-dvh bg-[red] flex justify-center items-center flex-col gap-3 text-center text-4xl text-white z-99999 pointer-events-none loader"
+      class="fixed top-0 left-0 w-full h-dvh bg-[#9EBFC8] flex justify-center items-center flex-col gap-3 text-center text-4xl text-white z-99999 pointer-events-none loader"
     >
       <p class="font-second font-bold loadingPercentage">100%</p>
       <h3>
@@ -23,14 +23,17 @@
     </div>
     <div id="smooth-wrapper">
       <div id="smooth-content">
-        <!-- Hero section -->
-        <section class="relative h-dvh overflow-hidden">
+        <!-- Main hero bg image -->
+        <div>
           <img
-            data-speed="0.5"
-            src="./src/img/maya.jpg"
+            data-speed="0.7"
+            src="./src/img/bg.jpg"
             alt="..."
-            class="w-full h-full object-cover absolute top-0 left-0 bg-img saturate-0"
+            class="w-full absolute top-0 left-0 bg-img"
           />
+        </div>
+        <!-- Hero section -->
+        <section class="relative h-dvh overflow-hidden z-10">
           <div
             class="max-w-350 mx-auto py-12 relative z-10 flex flex-col items-center"
           >
@@ -58,7 +61,7 @@
               </p>
               <p class="relative overflow-hidden pb-1">
                 <span
-                  class="absolute bottom-0 left-0 w-full h-0.5 bg-[red] scroll-underline"
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-white scroll-underline"
                 ></span>
                 Scroll to discover
               </p>
@@ -67,7 +70,16 @@
         </section>
         <!-- Spacer -->
         <section
-          class="video-section relative bg-white overflow-hidden text-4xl font-light text-center"
+          class="max-w-4xl mx-auto py-32 grid grid-cols-2 gap-12 relative z-20"
+        >
+          <img class="block" src="./src/img/gallery01.jpg" alt="..." />
+          <img class="block mt-16" src="./src/img/gallery02.jpg" alt="..." />
+          <img class="block" src="./src/img/gallery03.jpg" alt="..." />
+          <img class="block -mt-60" src="./src/img/gallery04.jpg" alt="..." />
+        </section>
+        <!-- Spacer -->
+        <section
+          class="video-section relative overflow-hidden text-4xl font-light text-center"
         >
           <video
             id="scrollVideo"
