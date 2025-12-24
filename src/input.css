@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-first: "Stack Sans Notch", sans-serif;
+  --font-second: "Gloria Hallelujah", cursive;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-underline {
+  animation: scrollUnderline infinite 1.5s linear;
+}
+
+@keyframes scrollUnderline {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
